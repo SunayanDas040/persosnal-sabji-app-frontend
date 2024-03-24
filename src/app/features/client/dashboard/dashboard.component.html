@@ -1,0 +1,35 @@
+<div class="m-2 p-2 bg-gray-100">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+    @for (item of items; track $index) {
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-subtitle>Loose</mat-card-subtitle>
+          <img mat-card-xl-image [src]="item.imageSrc" />
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content class="p-2 mt-4">
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Please Select Quantity</mat-label>
+          <mat-select [(ngModel)]="selectedQuantity" (valueChange)="changeValue($event)">
+            @for (option of buyingOptions; track $index) {
+            <mat-option>
+              <div class="flex items-end">
+                <div class="basis-1/2">
+                  <div>{{ option.quantity }}</div>
+                  <div>&#8377; {{ option.price }}</div>
+                </div>
+                <div class="basis-1/2 w-full justify-end">
+                  <button mat-button class="btn-add" (click)="addQuantity($event)">Add</button>
+                </div>
+              </div>
+            </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.example.card {
+
+}
+
+.btn-add {
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+    float: right;
+}
+/* .mdc-list-item__primary-text {
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+}
+
+mat-option span {
+    width: 100%;
+} */

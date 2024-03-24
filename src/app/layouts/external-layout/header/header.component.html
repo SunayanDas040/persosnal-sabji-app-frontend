@@ -1,0 +1,32 @@
+<mat-toolbar class="m-2 p-2 rounded-lg shadow text-center flex bg-green-700">
+  <h3 class="basis-1/5">Sabji Bazaar</h3>
+  <div class="basis-3/5">
+    <!-- <mat-form-field class="form-field"> -->
+    <div class="text-center bg-white border-gray-500 rounded-lg flex">
+        <mat-icon class="basis-1/8 mt-2 text-left">search</mat-icon>
+      <input
+        matInput
+        [(ngModel)]="searchedTerm"
+        class="basis-6/8 rounded-lg w-full outline-none p-2 text-sm"
+      />
+      @if (searchedTerm) {
+      <button
+        mat-icon-button
+        aria-label="Clear"
+        (click)="searchedTerm = ''"
+        class="basis-1/8 p-2"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+      }
+    </div>
+
+    <!-- </mat-form-field> -->
+  </div>
+  <div class="basis-1/5">
+    <button mat-button class="flex flex-row text-center bg-slate-600" (click)="login()">
+      <mat-icon class="">login</mat-icon>
+      <label class="m-0">Login</label>
+    </button>
+  </div>
+</mat-toolbar>
