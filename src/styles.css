@@ -4,5 +4,81 @@
 @tailwind utilities;
 /* @import '~@fortawesome/fontawesome-free/css/all.css'; */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-form-bottom-0 .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mat-form-bottom-0 .mat-form-field-wrapper .mat-form-field-subscript-wrapper {
+  font-size: 75%;
+  /* margin-top: 0.6666666667em; */
+  margin-top: 0;
+  /* top: calc(100% - 0.291667em); */
+  top: calc(100% + 0.2em);
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 !important;
+  padding-bottom: 10px;
+  border-radius: 5rem;
+}
+mat-pseudo-checkbox {
+  display: none;
+}
+
+.mat-mdc-option .mat-pseudo-checkbox-checked {
+  display: none;
+}
+
+.mat-form-field {
+    background-color: blueviolet;
+}
+
+.mat-form-field-appearance-outline {
+    border-radius: 5rem;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing {
+  border-width: 0;
+}
+
+body
+  > app-root
+  > div
+  > app-external-layout
+  > div
+  > app-dashboard
+  > div
+  > div
+  > mat-card
+  > mat-card-content
+  > mat-form-field
+  > div.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--outlined
+  > div
+  > div.mdc-notched-outline.mdc-notched-outline--upgraded
+  > div.mdc-notched-outline__notch {
+  border-right: none;
+}

@@ -18,14 +18,17 @@ export class DashboardComponent implements OnInit {
     {
       quantity: '250g',
       price: '24',
+      id: 1,
     },
     {
       quantity: '500g',
       price: '34.5',
+      id: 2,
     },
     {
       quantity: '1kg',
       price: '68',
+      id: 3
     },
   ];
 

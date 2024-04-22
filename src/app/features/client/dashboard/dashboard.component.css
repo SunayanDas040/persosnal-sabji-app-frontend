@@ -1,13 +1,36 @@
 .example.card {
-
 }
 
 .btn-add {
-    color: white;
-    background-color: green;
-    border-radius: 20px;
-    float: right;
+  color: white;
+  background-color: green;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
 }
+
+::ng-deep mat-option > span {
+  width: 100%;
+}
+
+/* .example-div {
+  margin: 50px;
+  padding: 20px;
+  position: static;
+  border: 1px solid skyblue;
+} */
+
+
+
+.option-container {
+  /* display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center; */
+}
+
+/* .mat-mdc-button {
+    float: right;
+} */
 /* .mdc-list-item__primary-text {
     width: 100%;
 }

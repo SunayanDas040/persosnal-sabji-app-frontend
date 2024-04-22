@@ -3,7 +3,7 @@
   <div class="basis-3/5">
     <!-- <mat-form-field class="form-field"> -->
     <div class="text-center bg-white border-gray-500 rounded-lg flex">
-        <mat-icon class="basis-1/8 mt-2 text-left">search</mat-icon>
+      <mat-icon class="basis-1/8 mt-2 text-left">search</mat-icon>
       <input
         matInput
         [(ngModel)]="searchedTerm"
@@ -24,9 +24,27 @@
     <!-- </mat-form-field> -->
   </div>
   <div class="basis-1/5">
-    <button mat-button class="flex flex-row text-center bg-slate-600" (click)="login()">
-      <mat-icon class="">login</mat-icon>
-      <label class="m-0">Login</label>
-    </button>
+    <div class="flex justify-center gap-2">
+      <div class="basic-1/2">
+        <button
+          mat-button
+          class="flex flex-row text-center bg-slate-600"
+          (click)="login()"
+        >
+          <mat-icon class="">shopping_cart</mat-icon>
+          <label class="m-0">Cart</label>
+        </button>
+      </div>
+      <div class="basic-1/2">
+        <button
+          mat-button
+          class="flex flex-row text-center bg-slate-600"
+          (click)="login()"
+        >
+          <mat-icon class="">login</mat-icon>
+          <label class="m-0">Login</label>
+        </button>
+      </div>
+    </div>
   </div>
 </mat-toolbar>
