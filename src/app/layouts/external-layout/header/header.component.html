@@ -26,14 +26,19 @@
   <div class="basis-1/5">
     <div class="flex justify-center gap-2">
       <div class="basic-1/2">
-        <button
-          mat-button
-          class="flex flex-row text-center bg-slate-600"
-          (click)="login()"
-        >
-          <mat-icon class="">shopping_cart</mat-icon>
-          <label class="m-0">Cart</label>
-        </button>
+        <div>
+          <button
+            mat-button
+            class="flex flex-row text-center bg-slate-600 cart-btn"
+            (click)="gotoCart()"
+          >
+            @if (cartCount() !== 0) {
+            <sup class="noti-div">{{ cartCount() }}</sup>
+            }
+            <mat-icon class="">shopping_cart</mat-icon>
+            <!-- <label class="m-0">Cart</label>s -->
+          </button>
+        </div>
       </div>
       <div class="basic-1/2">
         <button

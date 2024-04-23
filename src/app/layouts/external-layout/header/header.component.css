@@ -5,3 +5,15 @@
 mat-toolbar {
     background-color: lightgreen;
 }
+
+.noti-div {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(255, 72, 55);
+  color: white;
+}
+
+.cart-btn .mat-icon {
+  margin-right: 0;
+}

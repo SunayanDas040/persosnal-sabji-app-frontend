@@ -3,6 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -32,6 +33,8 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
+  constructor(private cartService: CartService) {}
+
   ngOnInit(): void {
     this.setItems();
     console.log('Client Dashboard');
@@ -40,6 +43,7 @@ export class DashboardComponent implements OnInit {
   changeValue(event: any) {
     console.log(event);
     this.selectedQuantity = event;
+    this.cartService.incrementCount();
   }
 
   addQuantity(event: any) {
